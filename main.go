@@ -10,6 +10,8 @@ func main() {
 		fmt.Fprintln(w, "Hello, World!")
 		if GreetingEnabled() {
 			fmt.Fprintln(w, "The greeting variable is true")
+			fmt.Fprintf(w, "Max items: %d\n", MaxItems())
+			fmt.Fprintf(w, "Retry count: %d\n", RetryCount())
 		}
 	})
 
