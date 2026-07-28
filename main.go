@@ -8,6 +8,9 @@ import (
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintln(w, "Hello, World!")
+		if GreetingEnabled() {
+			fmt.Fprintln(w, "The greeting variable is true")
+		}
 	})
 
 	fmt.Println("Listening on :8080")
